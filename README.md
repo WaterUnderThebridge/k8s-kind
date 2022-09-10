@@ -5,13 +5,13 @@
 
 # 安装方法:
 
-## 使用安装包安装
-1. 构建安装包(使用makeself工具构建)
+## 使用安装包制品安装
+1. 构建成安装包制品(使用makeself工具构建)
 ~~~shell
 cd ..
 sudo k8s-kind/makeself/makeself.sh --tar-extra "--exclude=.git"  k8s-kind/  k8s-kind.run "k8s installing ..."  ./install.sh
 ~~~
-2. 使用安装包安装
+2. 运行安装包
 ~~~shell
 sudo su
 ./ k8s-kind.run
