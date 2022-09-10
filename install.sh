@@ -26,12 +26,12 @@ yum remove docker \
                   container-selinux  -y  && \
 tar -xf packages/docker-rpm.tar.gz -C /tmp && \
 yum install /tmp/docker-rpm/*   -y  && \
-systemctl enable docker && systemctl start docker && \
+systemctl enable docker && systemctl start docker
 
 
 [ $? -ne 0 ] && exit -1
 Echo_Green "2. load docker image kind-node"
-docker load -i packages/kind_node-v1.25.0.tar.gz && \
+docker load -i packages/kind_node-v1.25.0.tar.gz 
 
 
 [ $? -ne 0 ] && exit -1
