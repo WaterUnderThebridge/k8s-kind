@@ -26,6 +26,11 @@ yum remove docker \
                   container-selinux  -y  && \
 tar -xf packages/docker-rpm.tar.gz -C /tmp && \
 yum install /tmp/docker-rpm/*   -y  && \
+cat << EOF > /etc/docker/daemon.json 
+{
+ "registry-mirrors": ["http://hub-mirror.c.163.com", "https://docker.mirrors.ustc.edu.cn"]
+}
+EOF
 systemctl enable docker && systemctl start docker
 
 
