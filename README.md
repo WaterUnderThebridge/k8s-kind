@@ -14,7 +14,7 @@ sudo k8s-kind/makeself/makeself.sh --tar-extra "--exclude=.git"  k8s-kind/  k8s-
 2. 运行安装包
 ~~~shell
 sudo su
-./ k8s-kind.run
+./k8s-kind.run
 ~~~
 
 ## 直接脚本安装
