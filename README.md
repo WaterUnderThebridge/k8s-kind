@@ -8,7 +8,6 @@
 ## 使用安装包制品安装
 1. 构建成安装包制品(使用makeself工具构建)
 ~~~shell
-cd ..
 sudo k8s-kind/makeself/makeself.sh --tar-extra "--exclude=.git"  k8s-kind/  k8s-kind.run "k8s installing ..."  ./install.sh
 ~~~
 2. 运行安装包
@@ -25,6 +24,6 @@ cd k8s-kind && ./install.sh
 # k8s测试
 * 加载环境变更
 source /etc/profile
-* 创建容器测试
+* 创建容器测试(拉取镜像需要虚拟机能访问外网)
 k run busybox --image=busybox --command sleep infinity
 k get pod
