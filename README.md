@@ -24,7 +24,9 @@ cd k8s-kind && ./install.sh
 
 ## k8s测试
 * 加载环境变量
-source /etc/profile
+`source /etc/profile`
 * 创建容器测试(拉取镜像需要虚拟机能访问外网)
+```shell
 k run busybox --image=busybox --command sleep infinity
 k get pod
+```
